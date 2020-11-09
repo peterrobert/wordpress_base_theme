@@ -8,12 +8,15 @@
  * E.g., it puts together the home page when no home.php file exists.
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
- * @package _s
+ * @package bootstrapwp
  */
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
+<div class="container">
+<div class="row">
+
+	<div id="primary" class="col-md-9 col-lg-9">
 		<main id="main" class="site-main" role="main">
 
 		<?php if ( have_posts() ) : ?>
@@ -31,7 +34,7 @@ get_header(); ?>
 
 			<?php endwhile; ?>
 
-			<?php _s_paging_nav(); ?>
+			<?php bootstrapwp_paging_nav(); ?>
 
 		<?php else : ?>
 
